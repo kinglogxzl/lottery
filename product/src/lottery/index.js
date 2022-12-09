@@ -348,8 +348,11 @@ function createCard(user, isBold, id, showTable) {
   element.appendChild(createElement("company", COMPANY));
 
   element.appendChild(createElement("name", user[1]));
-
-  element.appendChild(createElement("details", user[0] + "<br/>" + user[2]));
+  if (!user[0]) {
+    user[0] = "";
+  }
+  user[0] = "许振龙❤️刘硕硕的婚礼"
+  element.appendChild(createElement("details", user[0]));
   return element;
 }
 
@@ -706,10 +709,10 @@ function random(num) {
  */
 function changeCard(cardIndex, user) {
   let card = threeDCards[cardIndex].element;
-
+  user[0] = "许振龙❤️刘硕硕的婚礼";
   card.innerHTML = `<div class="company">${COMPANY}</div><div class="name">${
     user[1]
-  }</div><div class="details">${user[0] || ""}<br/>${user[2] || "PSST"}</div>`;
+  }</div><div class="details">${user[0] || ""}</div>`;
 }
 
 /**
@@ -804,7 +807,7 @@ function reset() {
 }
 
 function createHighlight() {
-  let year = new Date().getFullYear() + "";
+  let year = "0430";
   let step = 4,
     xoffset = 1,
     yoffset = 1,
