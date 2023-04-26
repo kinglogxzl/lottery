@@ -31,4 +31,10 @@ jobs:
       run: |
         cd product
         npm install
+        npm run build
+
+    - name: Run
+      run: |
+        cd product/dist
+        node 
         npm run serve
