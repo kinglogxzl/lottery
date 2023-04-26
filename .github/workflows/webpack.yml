@@ -36,5 +36,4 @@ jobs:
     - name: Run
       run: |
         cd product/dist
-        node 
-        npm run serve
+        node ../../server/index.js 8888
