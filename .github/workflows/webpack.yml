@@ -29,6 +29,6 @@ jobs:
 
     - name: Build FE
       run: |
-        cd ../product
+        cd product
         npm install
         npm run serve
