@@ -28,6 +28,7 @@ jobs:
         npm install
 
     - name: Build FE
+      run: |
         cd ../product
         npm install
         npm run serve
