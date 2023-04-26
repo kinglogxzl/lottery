@@ -33,7 +33,3 @@ jobs:
         npm install
         npm run build
 
-    - name: Run
-      run: |
-        cd product/dist
-        node ../../server/index.js 8888
